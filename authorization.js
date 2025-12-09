@@ -1,5 +1,5 @@
 import bot from "./bot.js";
-
+import { AUTHORIZATION_MESSAGE } from "./constants.js";
 
 const isAuthorizedUsers = new Set()
 export async function Authorization (chatId, text) {
@@ -8,12 +8,12 @@ const botPass = process.env.bot_password
 
     try {
           if(text ==="/start" ) {
-            bot.sendMessage(chatId, "Parol kiriting") 
+            bot.sendMessage(chatId, AUTHORIZATION_MESSAGE.TYPE_PASSWORD) 
           }else if(text === botPass) {
             isAuthorizedUsers.add(chatId)
-            bot.sendMessage(chatId, "Parol tog'ri") 
+            bot.sendMessage(chatId, AUTHORIZATION_MESSAGE.PASSWORD_CORRECT) 
           }else {
-           bot.sendMessage(chatId, "Parol hato , qayta kiriting") 
+           bot.sendMessage(chatId, AUTHORIZATION_MESSAGE.PASSWORD_INCORRECT) 
           }
           
         

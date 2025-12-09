@@ -54,4 +54,8 @@ export const MEDICINE_MESSAGE = {
    /dorilar
    `
 }
-
+export const AUTHORIZATION_MESSAGE = {
+   PASSWORD_INCORRECT: "Yo'q,  noto'g'ri 🙃😆.... \n Qayta urinib ko'ring 🔄️",
+   PASSWORD_CORRECT: "Loluuuuush , jonim mani, hush kelibsiz go'zalim🌷🤗",
+   TYPE_PASSWORD: "Assalomu alekum, Eslatmagin (shundog'am esimda) botiga hush kelibsiz, \n Parol kiriting, keyin gaplashamiza"
+} 
