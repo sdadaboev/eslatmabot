@@ -1,20 +1,23 @@
-import bot from "./bot.js";
+
 import { COMMANDS } from "./constants.js";
-import infoPage from "./pages/infoPage.js";
+import InfoPage from "./pages/infoPage.js";
+import MedicinesPage from "./pages/medicinesPage.js";
 
-async function Routers (chatId, request) {
+async function Routers (chatId, message) {
 
-    switch(request) {
-
-
-        case COMMANDS.INFO: infoPage(chatId)
-        break 
-
-       
+    switch(message) {
 
 
+        case COMMANDS.INFO: InfoPage(chatId); 
+        break; 
+
+        case COMMANDS.MEDICINES: MedicinesPage(chatId, message)
+        break
+
+        
     }
 
-}
+   
 
+}
 export default Routers

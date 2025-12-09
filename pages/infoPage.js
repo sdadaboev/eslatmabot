@@ -1,7 +1,7 @@
 import bot from "../bot.js";
 
-async function infoPage (chatId) {
+async function InfoPage (chatId) {
    await bot.sendMessage(chatId, "from info page")
 }
 
-export default infoPage
+export default InfoPage

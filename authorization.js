@@ -1,19 +1,19 @@
 import bot from "./bot.js";
-import Router from "./Tekshir.js";
+
 
 const isAuthorizedUsers = new Set()
 export async function Authorization (chatId, text) {
 const botPass = process.env.bot_password
-console.log("authorizationdaman")
+
 
     try {
-          if(text === "/start") {
-            await bot.sendMessage(chatId, "Parol kiriting")
+          if(text ==="/start" ) {
+            bot.sendMessage(chatId, "Parol kiriting") 
           }else if(text === botPass) {
-            await isAuthorizedUsers.add(chatId)
-            await bot.sendMessage(chatId, "tizimga kirildi");
-          }else{
-            await bot.sendMessage(chatId, "Parol hato");
+            isAuthorizedUsers.add(chatId)
+            bot.sendMessage(chatId, "Parol tog'ri") 
+          }else {
+           bot.sendMessage(chatId, "Parol hato , qayta kiriting") 
           }
           
         
